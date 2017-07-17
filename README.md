@@ -25,6 +25,10 @@
 * iOS 8.0+
 * Xcode 8 with Swift 3
 
+## Preview
+
+![Oops](./Assets/ScreenShot.png)
+
 ## Installation
 
 #### CocoaPods
@@ -188,21 +192,3 @@ class ViewController: UIViewController {
   }
 }
 ```
-
-## Preview
-
-![01](./Assets/ScreenShot01.png)
-
-![02](./Assets/ScreenShot02.png)
-
-![03](./Assets/ScreenShot03.png)
-
-![04](./Assets/ScreenShot04.png)
-
-![05](./Assets/ScreenShot05.png)
-
-![06](./Assets/ScreenShot06.png)
-
-![07](./Assets/ScreenShot07.png)
-
-![08](./Assets/ScreenShot08.png)
