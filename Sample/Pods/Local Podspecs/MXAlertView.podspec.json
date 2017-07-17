@@ -1,0 +1,24 @@
+{
+  "name": "MXAlertView",
+  "version": "1.0.0",
+  "summary": "A delightful dialog view for iOS written in Swift",
+  "description": "MXAlertView is a delightful dialog view for iOS written in Swift.",
+  "homepage": "https://github.com/Meniny/MXAlertView",
+  "license": "MIT",
+  "authors": {
+    "Meniny": "Meniny@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/Meniny/MXAlertView.git",
+    "tag": "1.0.0"
+  },
+  "social_media_url": "https://meniny.cn/",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "MXAlertView/*.*",
+  "frameworks": [
+    "Foundation",
+    "UIKit"
+  ]
+}

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="SMv-1o-diZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="PbR-x9-Q4f">
+            <objects>
+                <viewController id="SMv-1o-diZ" customClass="ViewController" customModule="MXAlertViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I4M-9I-DF2"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Ze-rb-q8u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fby-jt-0aM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrl-ov-1cO">
+                                <rect key="frame" x="149" y="153" width="76" height="30"/>
+                                <state key="normal" title="Show Error">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showError:" destination="SMv-1o-diZ" eventType="touchUpInside" id="B9M-Lp-9Pj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dam-Ey-XLY">
+                                <rect key="frame" x="144.5" y="203" width="87" height="30"/>
+                                <state key="normal" title="Show Notice">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showNotice:" destination="SMv-1o-diZ" eventType="touchUpInside" id="9at-D8-zeQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2AS-lm-f4r">
+                                <rect key="frame" x="138.5" y="253" width="99" height="30"/>
+                                <state key="normal" title="Show Warning">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWarning:" destination="SMv-1o-diZ" eventType="touchUpInside" id="gVm-Oe-GHx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwd-6t-6IC">
+                                <rect key="frame" x="154.5" y="303" width="68" height="30"/>
+                                <state key="normal" title="Show Info">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showInfo:" destination="SMv-1o-diZ" eventType="touchUpInside" id="ghs-Ae-8FT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcJ-Z3-rci">
+                                <rect key="frame" x="137.5" y="103" width="100" height="30"/>
+                                <state key="normal" title="Show Success">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showSuccess:" destination="SMv-1o-diZ" eventType="touchUpInside" id="6e4-LJ-PL3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1L4-1p-h5t">
+                                <rect key="frame" x="109" y="391" width="157" height="30"/>
+                                <state key="normal" title="Show Custom Subview">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCustomSubview:" destination="SMv-1o-diZ" eventType="touchUpInside" id="bXn-Do-YP8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iv0-OQ-Eds">
+                                <rect key="frame" x="153.5" y="353" width="69" height="30"/>
+                                <state key="normal" title="Show Edit">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showEdit:" destination="SMv-1o-diZ" eventType="touchUpInside" id="bu1-pB-fti"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="puN-f2-QRz">
+                                <rect key="frame" x="121.5" y="437" width="132" height="30"/>
+                                <state key="normal" title="Show Custom Alert"/>
+                                <connections>
+                                    <action selector="showCustomAlert:" destination="SMv-1o-diZ" eventType="touchUpInside" id="2x8-XP-ZcL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2AS-lm-f4r" firstAttribute="top" secondItem="Dam-Ey-XLY" secondAttribute="bottom" constant="20" id="8jK-Dt-VX1"/>
+                            <constraint firstItem="1L4-1p-h5t" firstAttribute="centerX" secondItem="fby-jt-0aM" secondAttribute="centerX" id="Dcq-PL-g18"/>
+                            <constraint firstItem="Iv0-OQ-Eds" firstAttribute="leading" secondItem="zwd-6t-6IC" secondAttribute="leading" id="GV9-Rl-8dd"/>
+                            <constraint firstItem="mcJ-Z3-rci" firstAttribute="top" secondItem="I4M-9I-DF2" secondAttribute="bottom" constant="83" id="IoE-j4-7Is"/>
+                            <constraint firstItem="zwd-6t-6IC" firstAttribute="top" secondItem="2AS-lm-f4r" secondAttribute="bottom" constant="20" id="LJF-en-mz8"/>
+                            <constraint firstItem="zrl-ov-1cO" firstAttribute="top" secondItem="mcJ-Z3-rci" secondAttribute="bottom" constant="20" id="LYI-Os-nxG"/>
+                            <constraint firstItem="Dam-Ey-XLY" firstAttribute="centerX" secondItem="mcJ-Z3-rci" secondAttribute="centerX" id="Mad-2E-KfC"/>
+                            <constraint firstItem="2AS-lm-f4r" firstAttribute="centerX" secondItem="zwd-6t-6IC" secondAttribute="centerX" id="PS5-VZ-1OZ"/>
+                            <constraint firstAttribute="centerX" secondItem="zrl-ov-1cO" secondAttribute="centerX" constant="0.5" id="T75-fr-eKf"/>
+                            <constraint firstItem="Iv0-OQ-Eds" firstAttribute="top" secondItem="zwd-6t-6IC" secondAttribute="bottom" constant="20" id="Z6d-re-kCF"/>
+                            <constraint firstItem="mcJ-Z3-rci" firstAttribute="centerX" secondItem="I4M-9I-DF2" secondAttribute="centerX" id="ZwH-9r-UdW"/>
+                            <constraint firstItem="2AS-lm-f4r" firstAttribute="centerX" secondItem="Dam-Ey-XLY" secondAttribute="centerX" id="buI-BP-oaD"/>
+                            <constraint firstItem="puN-f2-QRz" firstAttribute="centerX" secondItem="fby-jt-0aM" secondAttribute="centerX" id="emQ-uB-ca1"/>
+                            <constraint firstItem="Iv0-OQ-Eds" firstAttribute="centerX" secondItem="mcJ-Z3-rci" secondAttribute="centerX" constant="0.5" id="gkq-IU-nvu"/>
+                            <constraint firstItem="puN-f2-QRz" firstAttribute="top" secondItem="1L4-1p-h5t" secondAttribute="bottom" constant="16" id="h4J-gP-KdY"/>
+                            <constraint firstItem="Iv0-OQ-Eds" firstAttribute="centerY" secondItem="mcJ-Z3-rci" secondAttribute="centerY" constant="258" id="iBV-ZS-KmX"/>
+                            <constraint firstAttribute="centerX" secondItem="mcJ-Z3-rci" secondAttribute="centerX" id="m1y-bj-jSI"/>
+                            <constraint firstItem="1L4-1p-h5t" firstAttribute="top" secondItem="Iv0-OQ-Eds" secondAttribute="bottom" constant="8" id="rEs-eN-DfB"/>
+                            <constraint firstItem="Dam-Ey-XLY" firstAttribute="top" secondItem="zrl-ov-1cO" secondAttribute="bottom" constant="20" id="ud3-Zw-zg6"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="iBV-ZS-KmX"/>
+                                <exclude reference="GV9-Rl-8dd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="2yU-3f-xBS"/>
+                    <value key="contentSizeForViewInPopover" type="size" width="480" height="640"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MP2-Nr-u7D" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="173"/>
+        </scene>
+    </scenes>
+</document>

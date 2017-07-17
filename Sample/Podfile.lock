@@ -1,0 +1,16 @@
+PODS:
+  - Oops (1.0.0)
+
+DEPENDENCIES:
+  - Oops (from `../`)
+
+EXTERNAL SOURCES:
+  Oops:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Oops: de1a44d4b3c8b6b9d1d749608b5b5e0f4db15706
+
+PODFILE CHECKSUM: e6d0028c6b7fd68ecc3091d6948e0c2b57acfb29
+
+COCOAPODS: 1.2.1

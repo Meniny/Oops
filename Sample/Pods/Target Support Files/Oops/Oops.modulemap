@@ -1,0 +1,6 @@
+framework module Oops {
+  umbrella header "Oops-umbrella.h"
+
+  export *
+  module * { export * }
+}
