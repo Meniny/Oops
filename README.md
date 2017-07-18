@@ -18,7 +18,7 @@
 
 ## What's this?
 
-`Oops` is a delightful dialog view for iOS written in Swift.
+`Oops` is a delightful [SCLAlertView](https://github.com/dogo/SCLAlertView) like dialog view for iOS written in Swift.
 
 ## Requirements
 
