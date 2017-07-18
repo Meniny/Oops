@@ -293,11 +293,12 @@ open class Oops: UIViewController {
     }
     
     @discardableResult
-    open func addTextView() -> UITextView {
+    open func addTextView(text: String? = nil) -> UITextView {
         // Update view height
         configuration.set(windowHeight: configuration.windowHeight + configuration.textViewdHeight)
         // Add text view
         let txt = UITextView()
+        txt.text = text ?? ""
         // No placeholder with UITextView but you can use KMPlaceholderTextView library
         txt.font = configuration.textFont
         //txt.autocapitalizationType = UITextAutocapitalizationType.Words
