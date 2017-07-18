@@ -25,7 +25,7 @@ public extension Oops {
             static var warningTargets: [AnyObject]?
             static var imageOfInfo: UIImage?
             static var infoTargets: [AnyObject]?
-            static var imageOfEdit: UIImage?
+            static var imageOfEditor: UIImage?
             static var editTargets: [AnyObject]?
             static var imageOfQuestion: UIImage?
             static var questionTargets: [AnyObject]?
@@ -305,15 +305,15 @@ public extension Oops {
             return Oops.IconPainting.Cache.imageOfInfo!
         }
         
-        public class var imageOfEdit: UIImage {
-            if (Oops.IconPainting.Cache.imageOfEdit != nil) {
-                return Oops.IconPainting.Cache.imageOfEdit!
+        public class var imageOfEditor: UIImage {
+            if (Oops.IconPainting.Cache.imageOfEditor != nil) {
+                return Oops.IconPainting.Cache.imageOfEditor!
             }
             UIGraphicsBeginImageContextWithOptions(CGSize(width: 80, height: 80), false, 0)
             Oops.IconPainting.drawEdit()
-            Oops.IconPainting.Cache.imageOfEdit = UIGraphicsGetImageFromCurrentImageContext()
+            Oops.IconPainting.Cache.imageOfEditor = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            return Oops.IconPainting.Cache.imageOfEdit!
+            return Oops.IconPainting.Cache.imageOfEditor!
         }
         
         public class var imageOfQuestion: UIImage {

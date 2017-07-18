@@ -35,7 +35,7 @@ open class Oops: UIViewController {
     var configuration: Oops.Configuration!
     
     // UI Colour
-    var viewColor = UIColor()
+    var viewColor = UIColor.white
     
     // UI Options
     open var iconTintColor: UIColor?
@@ -269,19 +269,23 @@ open class Oops: UIViewController {
     }
     
     @discardableResult
-    open func addTextField(_ title: String? = nil) -> UITextField {
+    open func addTextField(_ placeholder: String? = nil, text: String? = nil, secure: Bool = false) -> UITextField {
         // Update view height
         configuration.set(windowHeight: configuration.windowHeight + configuration.textFieldHeight)
         // Add text field
         let txt = UITextField(frame: CGRect(x: 0, y: 0, width: configuration.windowWidth - 24, height: configuration.textFieldHeight))
+        txt.isSecureTextEntry = secure
         txt.borderStyle = UITextBorderStyle.roundedRect
         txt.font = configuration.textFont
         txt.autocapitalizationType = UITextAutocapitalizationType.words
         txt.clearButtonMode = UITextFieldViewMode.whileEditing
         txt.layer.masksToBounds = true
         txt.layer.borderWidth = 1.0
-        if title != nil {
-            txt.placeholder = title!
+        if let t = text {
+            txt.text = t
+        }
+        if let ph = placeholder {
+            txt.placeholder = ph
         }
         contentView.addSubview(txt)
         textFields.append(txt)
@@ -443,222 +447,39 @@ open class Oops: UIViewController {
     
     // MARK: - Show
     
-    /// showCustom(view, title, subTitle, UIColor, UIImage)
     @discardableResult
-    open func showCustom(_ title: String,
-                         subTitle: String,
-                         color: UIColor,
-                         icon: UIImage,
-                         closeButtonTitle: String? = nil,
-                         timeout: Oops.TimeoutConfiguration? = nil,
-                         colorStyle: UInt = Oops.PopUpStyle.success.defaultColor,
-                         colorTextButton: UInt = kUIntWhite,
-                         circleIconImage: UIImage? = nil,
-                         animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
-        
-        
-        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
-        
-        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        
-        var colorAsUInt32 : UInt32 = 0
-        colorAsUInt32 += UInt32(red * 255.0) << 16
-        colorAsUInt32 += UInt32(green * 255.0) << 8
-        colorAsUInt32 += UInt32(blue * 255.0)
-        
-        let colorAsUInt = UInt(colorAsUInt32)
-        
-        return showTitle(title,
-                         subTitle: subTitle,
-                         timeout: timeout,
-                         completeText:closeButtonTitle,
-                         style: .success,
-                         colorStyle: colorAsUInt,
-                         colorTextButton: colorTextButton,
-                         circleIconImage: icon,
-                         animationStyle: animationStyle)
-    }
-    
-    /// showSuccess(view, title, subTitle)
-    @discardableResult
-    open func showSuccess(_ title: String,
-                          subTitle: String,
-                          closeButtonTitle: String? = nil,
-                          timeout: Oops.TimeoutConfiguration? = nil,
-                          colorStyle: UInt = Oops.PopUpStyle.success.defaultColor,
-                          colorTextButton: UInt = kUIntWhite,
-                          circleIconImage: UIImage? = nil,
-                          animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
-        return showTitle(title,
-                         subTitle: subTitle,
-                         timeout: timeout,
-                         completeText:closeButtonTitle,
-                         style: .success,
-                         colorStyle: colorStyle,
-                         colorTextButton: colorTextButton,
-                         circleIconImage: circleIconImage,
-                         animationStyle: animationStyle)
-    }
-    
-    /// showError(view, title, subTitle)
-    @discardableResult
-    open func showError(_ title: String,
-                        subTitle: String,
-                        closeButtonTitle: String? = nil,
-                        timeout: Oops.TimeoutConfiguration? = nil,
-                        colorStyle: UInt = Oops.PopUpStyle.error.defaultColor,
-                        colorTextButton: UInt = kUIntWhite,
-                        circleIconImage: UIImage? = nil,
-                        animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
-        return showTitle(title,
-                         subTitle: subTitle,
-                         timeout: timeout,
-                         completeText:closeButtonTitle,
-                         style: .error,
-                         colorStyle: colorStyle,
-                         colorTextButton: colorTextButton,
-                         circleIconImage: circleIconImage,
-                         animationStyle: animationStyle)
-    }
-    
-    /// showNotice(view, title, subTitle)
-    @discardableResult
-    open func showNotice(_ title: String,
-                         subTitle: String,
-                         closeButtonTitle: String? = nil,
-                         timeout: Oops.TimeoutConfiguration? = nil,
-                         colorStyle: UInt = Oops.PopUpStyle.notice.defaultColor,
-                         colorTextButton: UInt = kUIntWhite,
-                         circleIconImage: UIImage? = nil,
-                         animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
-        return showTitle(title,
-                         subTitle: subTitle,
-                         timeout: timeout,
-                         completeText:closeButtonTitle,
-                         style: .notice,
-                         colorStyle: colorStyle,
-                         colorTextButton: colorTextButton,
-                         circleIconImage: circleIconImage,
-                         animationStyle: animationStyle)
-    }
-    
-    /// showWarning(view, title, subTitle)
-    @discardableResult
-    open func showWarning(_ title: String,
-                          subTitle: String,
-                          closeButtonTitle: String? = nil,
-                          timeout: Oops.TimeoutConfiguration? = nil,
-                          colorStyle: UInt = Oops.PopUpStyle.warning.defaultColor,
-                          colorTextButton: UInt = kUIntBlack,
-                          circleIconImage: UIImage? = nil,
-                          animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
-        return showTitle(title,
-                         subTitle: subTitle,
-                         timeout: timeout,
-                         completeText:closeButtonTitle,
-                         style: .warning,
-                         colorStyle: colorStyle,
-                         colorTextButton: colorTextButton,
-                         circleIconImage: circleIconImage,
-                         animationStyle: animationStyle)
-    }
-    
-    /// showInfo(view, title, subTitle)
-    @discardableResult
-    open func showInfo(_ title: String,
-                       subTitle: String,
-                       closeButtonTitle: String? = nil,
-                       timeout: Oops.TimeoutConfiguration? = nil,
-                       colorStyle: UInt = Oops.PopUpStyle.info.defaultColor,
-                       colorTextButton: UInt = kUIntWhite,
-                       circleIconImage: UIImage? = nil,
-                       animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
-        return showTitle(title,
-                         subTitle: subTitle,
-                         timeout: timeout,
-                         completeText:closeButtonTitle,
-                         style: .info,
-                         colorStyle: colorStyle,
-                         colorTextButton: colorTextButton,
-                         circleIconImage: circleIconImage,
-                         animationStyle: animationStyle)
-    }
-    
-    /// showWait(view, title, subTitle)
-    @discardableResult
-    open func showWait(_ title: String,
-                       subTitle: String,
-                       closeButtonTitle: String? = nil,
-                       timeout: Oops.TimeoutConfiguration? = nil,
-                       colorStyle: UInt? = Oops.PopUpStyle.wait.defaultColor,
-                       colorTextButton: UInt = kUIntWhite,
-                       circleIconImage: UIImage? = nil,
-                       animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
-        return showTitle(title,
-                         subTitle: subTitle,
-                         timeout: timeout,
-                         completeText:closeButtonTitle,
-                         style: .wait,
-                         colorStyle: colorStyle,
-                         colorTextButton: colorTextButton,
-                         circleIconImage: circleIconImage,
-                         animationStyle: animationStyle)
+    open class func show(_ style: Oops.PopUpStyle,
+                   title: String?,
+                   detail: String,
+                   icon: UIImage? = nil,
+                   color mainColor: UIColor? = nil,
+                   buttonTitleColor: UIColor? = UIColor.white,
+                   completeText: String? = nil,
+                   configuration: Oops.Configuration? = nil,
+                   timeout: Oops.TimeoutConfiguration? = nil,
+                   animation: Oops.AnimationStyle = .topToBottom) -> Oops {
+        let alert = (configuration != nil) ? Oops(configuration: configuration!) : Oops()
+        return alert.show(style,
+                          title: title,
+                          detail: detail,
+                          icon: icon,
+                          color: mainColor,
+                          buttonTitleColor: buttonTitleColor,
+                          completeText: completeText,
+                          timeout: timeout,
+                          animation: animation)
     }
     
     @discardableResult
-    open func showEdit(_ title: String,
-                       subTitle: String,
-                       closeButtonTitle: String? = nil,
-                       timeout: Oops.TimeoutConfiguration? = nil,
-                       colorStyle: UInt = Oops.PopUpStyle.edit.defaultColor,
-                       colorTextButton: UInt = kUIntWhite,
-                       circleIconImage: UIImage? = nil,
-                       animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
-        return showTitle(title,
-                         subTitle: subTitle,
-                         timeout: timeout,
-                         completeText:closeButtonTitle,
-                         style: .edit,
-                         colorStyle: colorStyle,
-                         colorTextButton: colorTextButton,
-                         circleIconImage: circleIconImage,
-                         animationStyle: animationStyle)
-    }
-    
-    /// showTitle(view, title, subTitle, style)
-    @discardableResult
-    open func showTitle(_ title: String,
-                        subTitle: String,
-                        style: Oops.PopUpStyle,
-                        closeButtonTitle: String? = nil,
-                        timeout: Oops.TimeoutConfiguration? = nil,
-                        colorStyle: UInt? = kUIntBlack,
-                        colorTextButton: UInt = kUIntWhite,
-                        circleIconImage: UIImage? = nil,
-                        animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
-        
-        return showTitle(title,
-                         subTitle: subTitle,
-                         timeout: timeout,
-                         completeText: closeButtonTitle,
-                         style: style,
-                         colorStyle: colorStyle,
-                         colorTextButton: colorTextButton,
-                         circleIconImage: circleIconImage,
-                         animationStyle: animationStyle)
-    }
-    
-    /// showTitle(view, title, subTitle, timeout, style)
-    @discardableResult
-    open func showTitle(_ title: String,
-                        subTitle: String,
-                        timeout: Oops.TimeoutConfiguration?,
-                        completeText: String?,
-                        style: Oops.PopUpStyle,
-                        colorStyle: UInt? = kUIntBlack,
-                        colorTextButton: UInt? = kUIntWhite,
-                        circleIconImage: UIImage? = nil,
-                        animationStyle: Oops.AnimationStyle = .topToBottom) -> Oops.Responder {
+    open func show(_ style: Oops.PopUpStyle,
+                   title: String?,
+                   detail: String,
+                   icon: UIImage? = nil,
+                   color mainColor: UIColor? = nil,
+                   buttonTitleColor: UIColor? = UIColor.white,
+                   completeText: String? = nil,
+                   timeout: Oops.TimeoutConfiguration? = nil,
+                   animation: Oops.AnimationStyle = .topToBottom) -> Oops {
         selfReference = self
         view.alpha = 0
         view.tag = kUniqueTag
@@ -669,55 +490,55 @@ open class Oops: UIViewController {
         baseView.frame = rv.bounds
         
         // Alert colour/icon
-        viewColor = UIColor()
+        viewColor =  mainColor ?? style.defaultUIColor
         var iconImage: UIImage?
-        let colorInt = colorStyle ?? style.defaultColor
-        viewColor = UIColorFromRGB(colorInt)
+
         // Icon style
         switch style {
         case .success:
             
-            iconImage = checkCircleIconImage(circleIconImage, defaultImage: Oops.IconPainting.imageOfCheckmark)
+            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfCheckmark)
             
         case .error:
             
-            iconImage = checkCircleIconImage(circleIconImage, defaultImage: Oops.IconPainting.imageOfCross)
+            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfCross)
             
         case .notice:
             
-            iconImage = checkCircleIconImage(circleIconImage, defaultImage: Oops.IconPainting.imageOfNotice)
+            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfNotice)
             
         case .warning:
             
-            iconImage = checkCircleIconImage(circleIconImage, defaultImage: Oops.IconPainting.imageOfWarning)
+            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfWarning)
             
         case .info:
             
-            iconImage = checkCircleIconImage(circleIconImage, defaultImage: Oops.IconPainting.imageOfInfo)
+            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfInfo)
             
-        case .edit:
+        case .editor:
             
-            iconImage = checkCircleIconImage(circleIconImage, defaultImage: Oops.IconPainting.imageOfEdit)
+            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfEditor)
             
-        case .wait:
+        case .loading:
             iconImage = nil
             
         case .question:
-            iconImage = checkCircleIconImage(circleIconImage, defaultImage: Oops.IconPainting.imageOfQuestion)
+            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfQuestion)
         }
         
         // Title
-        if !title.isEmpty {
-            self.labelTitle.text = title
-            let actualHeight = title.heightWithConstrainedWidth(configuration.windowWidth - 24, font: self.labelTitle.font)
+        let titleString = title ?? style.rawValue
+        if !titleString.isEmpty {
+            self.labelTitle.text =  titleString
+            let actualHeight = titleString.heightWithConstrainedWidth(configuration.windowWidth - 24, font: self.labelTitle.font)
             self.labelTitle.frame = CGRect(x:12, y:configuration.titleTop, width: configuration.windowWidth - 24, height:actualHeight)
         }
         
-        // Subtitle
-        if !subTitle.isEmpty {
-            viewText.text = subTitle
+        // Detail
+        if !detail.isEmpty {
+            viewText.text = detail
             // Adjust text view size, if necessary
-            let str = subTitle as NSString
+            let str = detail as NSString
             let attr = [NSFontAttributeName:viewText.font ?? UIFont()]
             let sz = CGSize(width: configuration.windowWidth - 24, height:90)
             let r = str.boundingRect(with: sz, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes:attr, context:nil)
@@ -730,7 +551,9 @@ open class Oops: UIViewController {
         
         // Done button
         if configuration.showCloseButton {
-            _ = addButton(completeText ?? "Done", target: self, selector: #selector(Oops.hideView))
+            addButton(NSLocalizedString(completeText ?? "Done", comment: ""),
+                      target: self,
+                      selector: #selector(Oops.hideView))
         }
         
         //hidden/show circular view based on the ui option
@@ -740,7 +563,7 @@ open class Oops: UIViewController {
         // Alert view colour and images
         circleView.backgroundColor = viewColor
         // Spinner / icon
-        if style == .wait {
+        if style == .loading {
             let indicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
             indicator.startAnimating()
             circleIconView = indicator
@@ -748,8 +571,7 @@ open class Oops: UIViewController {
             if let iconTintColor = iconTintColor {
                 circleIconView = UIImageView(image: iconImage!.withRenderingMode(.alwaysTemplate))
                 circleIconView?.tintColor = iconTintColor
-            }
-            else {
+            } else {
                 circleIconView = UIImageView(image: iconImage!)
             }
             if circleIconView is UIImageView {
@@ -790,7 +612,7 @@ open class Oops: UIViewController {
                 btn.setTitleColor(customTextColor, for: UIControlState())
             } else {
                 // Use default BackgroundColor derived from AlertStyle
-                btn.setTitleColor(UIColorFromRGB(colorTextButton ?? kUIntWhite), for: UIControlState())
+                btn.setTitleColor(buttonTitleColor ?? UIColor.white, for: .normal)
             }
         }
         
@@ -804,20 +626,19 @@ open class Oops: UIViewController {
         }
         
         // Animate in the alert view
-        self.showAnimation(animationStyle)
+        self.showAnimation(animation)
         
-        // Chainable objects
-        return Oops.Responder(alertview: self)
+        return self
     }
     
     // Show animation in the alert view
-    fileprivate func showAnimation(_ animationStyle: Oops.AnimationStyle = .topToBottom, animationStartOffset: CGFloat = -400.0, boundingAnimationOffset: CGFloat = 15.0, animationDuration: TimeInterval = 0.2) {
+    fileprivate func showAnimation(_ animation: Oops.AnimationStyle = .topToBottom, animationStartOffset: CGFloat = -400.0, boundingAnimationOffset: CGFloat = 15.0, animationDuration: TimeInterval = 0.2) {
         
         let rv = UIApplication.shared.keyWindow! as UIWindow
         var animationStartOrigin = self.baseView.frame.origin
         var animationCenter : CGPoint = rv.center
         
-        switch animationStyle {
+        switch animation {
             
         case .none:
             self.view.alpha = 1.0

@@ -22,45 +22,50 @@ class ViewController: UIViewController {
     
     @IBAction func showSuccess(_ sender: AnyObject) {
         let alert = Oops()
-        alert.addButton("First Button", target: self, selector: #selector(ViewController.firstButton))
+        alert.addButton("First Button", target: self, selector: #selector(ViewController.firstButtonAction))
         alert.addButton("Second Button") {
             print("Second button tapped")
         }
-        alert.showSuccess(kSuccessTitle, subTitle: kSubtitle)
+        alert.show(.success, title: kSuccessTitle, detail: kSubtitle)
     }
     
     @IBAction func showError(_ sender: AnyObject) {
-        Oops().showError("Hold On...", subTitle:"You have not saved your Submission yet. Please save the Submission before accessing the Responses list. Blah de blah de blah, blah. Blah de blah de blah, blah.Blah de blah de blah, blah.Blah de blah de blah, blah.Blah de blah de blah, blah.Blah de blah de blah, blah.", closeButtonTitle:"OK")
-        //        Oops().showError(self, title: kErrorTitle, subTitle: kSubtitle)
+        Oops().show(.error,
+                    title: "Hold On...",
+                    detail: "You have not saved your Submission yet. Please save the Submission before accessing the Responses list. Blah de blah de blah, blah. Blah de blah de blah, blah.Blah de blah de blah, blah.Blah de blah de blah, blah.Blah de blah de blah, blah.Blah de blah de blah, blah.",
+                    completeText: "OK")
     }
     
     @IBAction func showNotice(_ sender: AnyObject) {
         let configuration = Oops.Configuration(dynamicAnimatorActive: true)
-        Oops(configuration: configuration).showNotice(kNoticeTitle, subTitle: kSubtitle)
+        Oops(configuration: configuration).show(.notice, title: kNoticeTitle, detail: kSubtitle)
     }
     
     @IBAction func showWarning(_ sender: AnyObject) {
-        Oops().showWarning(kWarningTitle, subTitle: kSubtitle)
+        Oops.show(.warning, title: kWarningTitle, detail: kSubtitle)
     }
     
     @IBAction func showInfo(_ sender: AnyObject) {
-        Oops().showInfo(kInfoTitle, subTitle: kSubtitle)
+        Oops.show(.info, title: kInfoTitle, detail: kSubtitle)
     }
     
     @IBAction func showEdit(_ sender: AnyObject) {
-        let configuration = Oops.Configuration(showCloseButton: true)
+        let configuration = Oops.Configuration(showCloseButton: false)
         let alert = Oops(configuration: configuration)
-        let txt1 = alert.addTextField("Enter your given name")
-        let txt2 = alert.addTextField("Enter your family name")
+        let txt1 = alert.addTextField("Enter your given name", text: "Elias")
+        let txt2 = alert.addTextField("Enter your family name", text: "Abel")
+        alert.addTextField("Enter your password", text: "123456", secure: true)
 //        alert.addTextView()
 //        alert.addTextView()
-        alert.addButton("Show Name") {
-            print("Text value: \(txt1.text ?? "NA") \(txt2.text ?? "NA")")
+        alert.addButton("Go") {
+            Oops.show(.info, title: nil, detail: "\(txt1.text ?? "NA") \(txt2.text ?? "NA")")
         }
-        alert.showEdit(kInfoTitle, subTitle:kSubtitle)
+        alert.show(.editor, title: kInfoTitle, detail: kSubtitle)
     }
     
     @IBAction func showCustomSubview(_ sender: AnyObject) {
+        let color = UIColor(red:0.26, green:0.56, blue:1.00, alpha:1.00)
+        
         // Create custom configuration Configuration
         let configuration = Oops.Configuration(
             titleFont: UIFont(name: "HelveticaNeue", size: 20)!,
@@ -79,7 +84,7 @@ class ViewController: UIViewController {
         let x = (subview.frame.width - 180) / 2
         
         // Add textfield 1
-        let textfield1 = UITextField(frame: CGRect(x: x,y: 10,width: 180,height: 40))
+        let textfield1 = UITextField(frame: CGRect(x: x, y: 10,width: 180,height: 40))
         textfield1.layer.borderColor = UIColor.green.cgColor
         textfield1.layer.borderWidth = 1.5
         textfield1.layer.cornerRadius = 5
@@ -107,7 +112,7 @@ class ViewController: UIViewController {
         
         // Add Button with visible timeout and custom Colors
         let showTimeout = Oops.Button.ShowTimeoutConfiguration(prefix: "(", suffix: "s)")
-        alert.addButton("Timeout Button", backgroundColor: UIColor(red:0.26, green:0.56, blue:1.00, alpha:1.00), textColor: UIColor.yellow, showTimeout: showTimeout) {
+        alert.addButton("Timeout Button", backgroundColor: color, textColor: UIColor.white, showTimeout: showTimeout) {
             print("Timeout Button tapped")
         }
         
@@ -116,7 +121,7 @@ class ViewController: UIViewController {
             print("Timeout occurred")
         }
         
-        alert.showInfo("Login", subTitle: "", timeout: Oops.TimeoutConfiguration(timeoutValue: timeoutValue, timeoutAction: timeoutAction))
+        alert.show(.success, title: "Login", detail: "", color: color, timeout: Oops.TimeoutConfiguration(timeoutValue: timeoutValue, timeoutAction: timeoutAction))
     }
     
     @IBAction func showCustomAlert(_ sender: AnyObject) {
@@ -132,7 +137,7 @@ class ViewController: UIViewController {
 //        configuration.shouldAutoDismiss = false
         
         let alert = Oops(configuration: configuration)
-        alert.addButton("First Button", target: self, selector: #selector(ViewController.firstButton))
+        alert.addButton("First Button", target: self, selector: #selector(ViewController.firstButtonAction))
         alert.addButton("Second Button") {
             print("Second button tapped")
         }
@@ -140,11 +145,11 @@ class ViewController: UIViewController {
 //            print("Third button tapped")
 //        }
         
-        let color = UIColor(red:0.69, green:0.92, blue:1.00, alpha:1.00)
-        alert.showCustom("Custom Color", subTitle: "Custom color", color: color, icon: #imageLiteral(resourceName: "avatar"))
+        let color = UIColor(red:0.87, green:0.29, blue:0.22, alpha:1.00)
+        alert.show(.notice, title: "Custom Color", detail: "Custom color", icon: #imageLiteral(resourceName: "avatar"), color: color)
     }
     
-    func firstButton() {
+    func firstButtonAction() {
         print("First button tapped")
     }
 }

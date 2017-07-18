@@ -11,10 +11,17 @@ import UIKit
 
 public extension Oops {
     // Pop Up Styles
-    public enum PopUpStyle: UInt {
-        case success, error, notice, warning, info, edit, wait, question
+    public enum PopUpStyle: String {
+        case success = "Success"
+        case error = "Error"
+        case notice = "Notice"
+        case warning = "Warning"
+        case info = "Info"
+        case editor = "Editor"
+        case loading = "Loading"
+        case question = "Question"
         
-        public var defaultColor: UInt {
+        public var defaultUIntColor: UInt {
             switch self {
             case .success:
                 return 0x22B573
@@ -26,13 +33,17 @@ public extension Oops {
                 return 0xFFD110
             case .info:
                 return 0x2866BF
-            case .edit:
+            case .editor:
                 return 0xA429FF
-            case .wait:
+            case .loading:
                 return 0xD62DA5
             case .question:
                 return 0x727375
             }   
+        }
+        
+        public var defaultUIColor: UIColor {
+            return UIColorFromRGB(defaultUIntColor)
         }
     }
     
