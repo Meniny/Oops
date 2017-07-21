@@ -2,7 +2,7 @@
 <p align="center">
   <img src="https://i.loli.net/2017/07/21/5971923186cb9.png" alt="Oops">
   <br/><a href="https://cocoapods.org/pods/Oops">
-  <img alt="Version" src="https://img.shields.io/badge/version-2.0.2-brightgreen.svg">
+  <img alt="Version" src="https://img.shields.io/badge/version-2.0.3-brightgreen.svg">
   <img alt="Author" src="https://img.shields.io/badge/author-Meniny-blue.svg">
   <img alt="Build Passing" src="https://img.shields.io/badge/build-passing-brightgreen.svg">
   <img alt="Swift" src="https://img.shields.io/badge/swift-3.0%2B-orange.svg">
