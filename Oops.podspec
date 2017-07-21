@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Oops"
-  s.version          = "2.0.1"
+  s.version          = "2.0.2"
   s.summary          = "A delightful dialog view for iOS written in Swift"
   s.description      = <<-DESC
                         Oops is a delightful dialog view for iOS written in Swift.

@@ -58,6 +58,8 @@ open class Oops: UIViewController {
     internal var buttons: [Oops.Button] = []
     fileprivate var selfReference: Oops?
     
+    // MARK: - Initializer
+    
     public init(configuration: Oops.Configuration) {
         self.configuration = configuration
         super.init(nibName:nil, bundle:nil)
@@ -82,6 +84,8 @@ open class Oops: UIViewController {
         super.init(nibName:nibNameOrNil, bundle:nibBundleOrNil)
 //        setup()
     }
+    
+    // MARK: - Configuration & Layout
     
     fileprivate func setup() {
         // Set up main view
@@ -268,8 +272,18 @@ open class Oops: UIViewController {
         }
     }
     
+    // MARK: - Adding UI Components
+    
+    /// Add a `UITextField` to Oops
+    ///
+    /// - Parameters:
+    ///   - placeholder: Placeholder string, default is nil
+    ///   - text: Text string, default is nil
+    ///   - secure: Secure text entry, default is false
+    ///   - capitalization: Autocapitalization type, defailt is none
+    /// - Returns: `UITextField` object
     @discardableResult
-    open func addTextField(_ placeholder: String? = nil, text: String? = nil, secure: Bool = false) -> UITextField {
+    open func addTextField(_ placeholder: String? = nil, text: String? = nil, secure: Bool = false, capitalization: UITextAutocapitalizationType = .none) -> UITextField {
         // Update view height
         configuration.set(windowHeight: configuration.windowHeight + configuration.textFieldHeight)
         // Add text field
@@ -277,7 +291,7 @@ open class Oops: UIViewController {
         txt.isSecureTextEntry = secure
         txt.borderStyle = UITextBorderStyle.roundedRect
         txt.font = configuration.textFont
-        txt.autocapitalizationType = UITextAutocapitalizationType.words
+        txt.autocapitalizationType = capitalization
         txt.clearButtonMode = UITextFieldViewMode.whileEditing
         txt.layer.masksToBounds = true
         txt.layer.borderWidth = 1.0
@@ -292,6 +306,10 @@ open class Oops: UIViewController {
         return txt
     }
     
+    /// Add a `UITextView` to Oops
+    ///
+    /// - Parameter text: Text string, default is nil
+    /// - Returns: `UITextView` object
     @discardableResult
     open func addTextView(text: String? = nil) -> UITextView {
         // Update view height
@@ -310,6 +328,15 @@ open class Oops: UIViewController {
         return txt
     }
     
+    /// Add a `Oops.Button` to Oops
+    ///
+    /// - Parameters:
+    ///   - title: Title string
+    ///   - backgroundColor: Background color, default is nil
+    ///   - textColor: Title color, default is nil
+    ///   - showTimeout: Timeout options, default is nil
+    ///   - action: Action closure
+    /// - Returns: `Oops.Button` object
     @discardableResult
     open func addButton(_ title: String,
                         backgroundColor: UIColor? = nil,
@@ -325,6 +352,16 @@ open class Oops: UIViewController {
         return btn
     }
     
+    /// Add a `Oops.Button` to Oops
+    ///
+    /// - Parameters:
+    ///   - title: Title string
+    ///   - backgroundColor: Background color, default is nil
+    ///   - textColor: Title color, default is nil
+    ///   - showTimeout: Timeout options, default is nil
+    ///   - target: Action `Selector` target
+    ///   - selector: Action `Selector` object
+    /// - Returns: `Oops.Button` object
     @discardableResult
     open func addButton(_ title: String,
                         backgroundColor: UIColor? = nil,
@@ -341,6 +378,8 @@ open class Oops: UIViewController {
         btn.addTarget(self, action: #selector(Oops.buttonRelease(_:)), for:[.touchUpInside, .touchUpOutside, .touchCancel, .touchDragOutside] )
         return btn
     }
+    
+    // MARK: - Internal & Private Functions
     
     @discardableResult
     fileprivate func addButton(_ title: String,
@@ -446,15 +485,29 @@ open class Oops: UIViewController {
         }
     }
     
-    // MARK: - Show
+    // MARK: - Showing Alert View
     
+    /// Show `Oops`
+    ///
+    /// - Parameters:
+    ///   - style: Pop up style, setup this to config the default title, icon, color, etc.
+    ///   - title: Title string, set to `nil` to use default title
+    ///   - detail: Detail String
+    ///   - icon: Custom icon image, set to `nil` to use default icon
+    ///   - mainColor: custom color, set to `nil` to use default color
+    ///   - buttonTitleColor: Button title color, set to `nil` to use default color
+    ///   - completeText: Close button title string, set to `nil` to use default title
+    ///   - configuration: Custom `Oops` configuration, set to `nil` to use default configuration
+    ///   - timeout: Timeout Options, default is `nil`
+    ///   - animation: Animation Style, default is `.topToBottom`
+    /// - Returns: `Oops` Object
     @discardableResult
     open class func show(_ style: Oops.PopUpStyle,
                    title: String?,
                    detail: String,
                    icon: UIImage? = nil,
                    color mainColor: UIColor? = nil,
-                   buttonTitleColor: UIColor? = UIColor.white,
+                   buttonTitleColor: UIColor? = nil,
                    completeText: String? = nil,
                    configuration: Oops.Configuration? = nil,
                    timeout: Oops.TimeoutConfiguration? = nil,
@@ -471,13 +524,26 @@ open class Oops: UIViewController {
                           animation: animation)
     }
     
+    /// Show `Oops`
+    ///
+    /// - Parameters:
+    ///   - style: Pop up style, setup this to config the default title, icon, color, etc.
+    ///   - title: Title string, set to `nil` to use default title
+    ///   - detail: Detail String
+    ///   - icon: Custom icon image, set to `nil` to use default icon
+    ///   - mainColor: custom color, set to `nil` to use default color
+    ///   - buttonTitleColor: Button title color, set to `nil` to use default color
+    ///   - completeText: Close button title string, set to `nil` to use default title
+    ///   - timeout: Timeout Options, default is `nil`
+    ///   - animation: Animation Style, default is `.topToBottom`
+    /// - Returns: `Oops` Object
     @discardableResult
     open func show(_ style: Oops.PopUpStyle,
                    title: String?,
                    detail: String,
                    icon: UIImage? = nil,
                    color mainColor: UIColor? = nil,
-                   buttonTitleColor: UIColor? = UIColor.white,
+                   buttonTitleColor: UIColor? = nil,
                    completeText: String? = nil,
                    timeout: Oops.TimeoutConfiguration? = nil,
                    animation: Oops.AnimationStyle = .topToBottom) -> Oops {
@@ -631,6 +697,8 @@ open class Oops: UIViewController {
         
         return self
     }
+    
+    // MARK: - Internal & Private Functions (Showing/Hiding/Animating)
     
     // Show animation in the alert view
     fileprivate func showAnimation(_ animation: Oops.AnimationStyle = .topToBottom, animationStartOffset: CGFloat = -400.0, boundingAnimationOffset: CGFloat = 15.0, animationDuration: TimeInterval = 0.2) {

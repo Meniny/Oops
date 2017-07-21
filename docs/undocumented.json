@@ -1,0 +1,754 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Button.swift",
+      "line": 15,
+      "symbol": "Oops.Button.ShowTimeoutConfiguration",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Button.swift",
+      "line": 19,
+      "symbol": "Oops.Button.ShowTimeoutConfiguration.init(prefix:suffix:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Button.swift",
+      "line": 35,
+      "symbol": "Oops.Button.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Button.swift",
+      "line": 39,
+      "symbol": "Oops.Button.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Button.swift",
+      "line": 43,
+      "symbol": "Oops.Button.init(frame:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 14,
+      "symbol": "Oops.PopUpStyle",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 15,
+      "symbol": "Oops.PopUpStyle.success",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 16,
+      "symbol": "Oops.PopUpStyle.error",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 17,
+      "symbol": "Oops.PopUpStyle.notice",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 18,
+      "symbol": "Oops.PopUpStyle.warning",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 19,
+      "symbol": "Oops.PopUpStyle.info",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 20,
+      "symbol": "Oops.PopUpStyle.editor",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 21,
+      "symbol": "Oops.PopUpStyle.loading",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 22,
+      "symbol": "Oops.PopUpStyle.question",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 24,
+      "symbol": "Oops.PopUpStyle.defaultUIntColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 45,
+      "symbol": "Oops.PopUpStyle.defaultUIColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 51,
+      "symbol": "Oops.AnimationStyle",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 52,
+      "symbol": "Oops.AnimationStyle.bottomToTop",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 52,
+      "symbol": "Oops.AnimationStyle.leftToRight",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 52,
+      "symbol": "Oops.AnimationStyle.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 52,
+      "symbol": "Oops.AnimationStyle.rightToLeft",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 52,
+      "symbol": "Oops.AnimationStyle.topToBottom",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 56,
+      "symbol": "Oops.ActionType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 57,
+      "symbol": "Oops.ActionType.closure",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 57,
+      "symbol": "Oops.ActionType.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 57,
+      "symbol": "Oops.ActionType.selector",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 60,
+      "symbol": "Oops.ButtonLayout",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 61,
+      "symbol": "Oops.ButtonLayout.horizontal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 61,
+      "symbol": "Oops.ButtonLayout.vertical",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 66,
+      "symbol": "Oops.Configuration",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 68,
+      "symbol": "Oops.Configuration.defaultConfiguration()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 72,
+      "symbol": "Oops.Configuration.defaultShadowOpacity",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 73,
+      "symbol": "Oops.Configuration.circleTopPosition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 74,
+      "symbol": "Oops.Configuration.circleBackgroundTopPosition",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 75,
+      "symbol": "Oops.Configuration.circleHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 76,
+      "symbol": "Oops.Configuration.circleIconHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 77,
+      "symbol": "Oops.Configuration.titleTop",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 78,
+      "symbol": "Oops.Configuration.titleHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 79,
+      "symbol": "Oops.Configuration.windowWidth",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 80,
+      "symbol": "Oops.Configuration.windowHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 81,
+      "symbol": "Oops.Configuration.textHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 82,
+      "symbol": "Oops.Configuration.textFieldHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 83,
+      "symbol": "Oops.Configuration.textViewdHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 84,
+      "symbol": "Oops.Configuration.buttonHeight",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 85,
+      "symbol": "Oops.Configuration.titleFont",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 86,
+      "symbol": "Oops.Configuration.titleMinimumScaleFactor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 87,
+      "symbol": "Oops.Configuration.textFont",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 88,
+      "symbol": "Oops.Configuration.buttonFont",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 89,
+      "symbol": "Oops.Configuration.showCloseButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 90,
+      "symbol": "Oops.Configuration.showCircularIcon",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 93,
+      "symbol": "Oops.Configuration.contentViewCornerRadius",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 94,
+      "symbol": "Oops.Configuration.fieldCornerRadius",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 95,
+      "symbol": "Oops.Configuration.buttonCornerRadius",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 98,
+      "symbol": "Oops.Configuration.circleBackgroundColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 99,
+      "symbol": "Oops.Configuration.contentViewColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 100,
+      "symbol": "Oops.Configuration.contentViewBorderColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 101,
+      "symbol": "Oops.Configuration.titleColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 102,
+      "symbol": "Oops.Configuration.dynamicAnimatorActive",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 103,
+      "symbol": "Oops.Configuration.disableTapGesture",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 104,
+      "symbol": "Oops.Configuration.buttonsLayout",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 106,
+      "symbol": "Oops.Configuration.init(defaultShadowOpacity:circleTopPosition:circleBackgroundTopPosition:circleHeight:circleIconHeight:titleTop:titleHeight:windowWidth:windowHeight:textHeight:textFieldHeight:textViewdHeight:buttonHeight:titleFont:titleMinimumScaleFactor:textFont:buttonFont:showCloseButton:showCircularIcon:shouldAutoDismiss:contentViewCornerRadius:fieldCornerRadius:buttonCornerRadius:hideWhenBackgroundViewIsTapped:circleBackgroundColor:contentViewColor:contentViewBorderColor:titleColor:dynamicAnimatorActive:disableTapGesture:buttonsLayout:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 173,
+      "symbol": "Oops.Configuration.set(windowHeight:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 177,
+      "symbol": "Oops.Configuration.set(textHeight:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 182,
+      "symbol": "Oops.TimeoutConfiguration",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 186,
+      "symbol": "Oops.TimeoutConfiguration.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 187,
+      "symbol": "Oops.TimeoutConfiguration.action",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 193,
+      "symbol": "Oops.TimeoutConfiguration.init(timeoutValue:timeoutAction:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 200,
+      "symbol": "kUIntWhite",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 201,
+      "symbol": "kUIntBlack",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 202,
+      "symbol": "kCircleHeightBackground",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 203,
+      "symbol": "kUniqueTag",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 204,
+      "symbol": "kUniqueAccessibilityIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Extensions.swift",
+      "line": 208,
+      "symbol": "UIColorFromRGB(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 14,
+      "symbol": "Oops.IconPainting",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 17,
+      "symbol": "Oops.IconPainting.Cache",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 35,
+      "symbol": "Oops.IconPainting.drawCheckmark()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 56,
+      "symbol": "Oops.IconPainting.drawCross()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 70,
+      "symbol": "Oops.IconPainting.drawNotice()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 107,
+      "symbol": "Oops.IconPainting.drawWarning()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 150,
+      "symbol": "Oops.IconPainting.drawInfo()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 176,
+      "symbol": "Oops.IconPainting.drawEdit()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 223,
+      "symbol": "Oops.IconPainting.drawQuestion()",
+      "symbol_kind": "source.lang.swift.decl.function.method.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 253,
+      "symbol": "Oops.IconPainting.imageOfCheckmark",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 264,
+      "symbol": "Oops.IconPainting.imageOfCross",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 275,
+      "symbol": "Oops.IconPainting.imageOfNotice",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 286,
+      "symbol": "Oops.IconPainting.imageOfWarning",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 297,
+      "symbol": "Oops.IconPainting.imageOfInfo",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 308,
+      "symbol": "Oops.IconPainting.imageOfEditor",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/IconPaintCode.swift",
+      "line": 319,
+      "symbol": "Oops.IconPainting.imageOfQuestion",
+      "symbol_kind": "source.lang.swift.decl.var.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": null,
+      "symbol": "Oops",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": null,
+      "symbol": "Oops",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": null,
+      "symbol": "Oops",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 33,
+      "symbol": "Oops",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 41,
+      "symbol": "Oops.iconTintColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 42,
+      "symbol": "Oops.customSubview",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 63,
+      "symbol": "Oops.init(configuration:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 69,
+      "symbol": "Oops.init(coder:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 76,
+      "symbol": "Oops.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 82,
+      "symbol": "Oops.init(nibName:bundle:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 145,
+      "symbol": "Oops.viewWillLayoutSubviews()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 257,
+      "symbol": "Oops.viewDidAppear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 263,
+      "symbol": "Oops.viewDidDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 269,
+      "symbol": "Oops.touchesEnded(_:with:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 770,
+      "symbol": "Oops.updateShowTimeout()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 792,
+      "symbol": "Oops.hideView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 820,
+      "symbol": "Oops.hideViewTimeout()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
+      "line": 834,
+      "symbol": "Oops.isShowing()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/Meniny/Projects/Github/Oops"
+}
