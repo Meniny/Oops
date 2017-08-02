@@ -24,7 +24,6 @@ public typealias OopsOptionsClosure = (_ index: Int, _ alert: Oops) -> Swift.Voi
 
 public extension Oops {
     
-    @discardableResult
     public static func showDebug(style: Oops.PopUpStyle,
                                  message: String?,
                                  title: String? = nil,
@@ -32,17 +31,17 @@ public extension Oops {
                                  buttons: [String]? = nil,
                                  close: String? = nil,
                                  configuration: Oops.Configuration? = nil,
-                                 action: OopsOptionsClosure? = nil) -> Oops {
+                                 action: OopsOptionsClosure? = nil) {
         #if DEBUG
-            return showOops(message,
-                            title: title != nil ? OopsLocalized(title!) : OopsLocalized("DEBUG"),
-                            icon: icon,
-                            buttons: buttons ?? [],
-                            close: close,
-                            style: style,
-                            configuration: configuration,
-                            useCustomTheme: false,
-                            action: action)
+            showOops(message,
+                     title: title != nil ? OopsLocalized(title!) : OopsLocalized("DEBUG"),
+                     icon: icon,
+                     buttons: buttons ?? [],
+                     close: close,
+                     style: style,
+                     configuration: configuration,
+                     useCustomTheme: false,
+                     action: action)
         #endif
     }
     
