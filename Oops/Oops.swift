@@ -558,40 +558,7 @@ open class Oops: UIViewController {
         
         // Alert colour/icon
         viewColor =  mainColor ?? style.defaultUIColor
-        var iconImage: UIImage?
-
-        // Icon style
-        switch style {
-        case .success:
-            
-            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfCheckmark)
-            
-        case .error:
-            
-            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfCross)
-            
-        case .notice:
-            
-            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfNotice)
-            
-        case .warning:
-            
-            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfWarning)
-            
-        case .info:
-            
-            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfInfo)
-            
-        case .editor:
-            
-            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfEditor)
-            
-        case .loading:
-            iconImage = nil
-            
-        case .question:
-            iconImage = checkCircleIconImage(icon, defaultImage: Oops.IconPainting.imageOfQuestion)
-        }
+        let iconImage: UIImage? = (style == .loading) ? nil : checkCircleIconImage(icon, defaultImage: style.icon!)
         
         // Title
         let titleString = title ?? style.rawValue
@@ -634,6 +601,9 @@ open class Oops: UIViewController {
             let indicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
             indicator.startAnimating()
             circleIconView = indicator
+            circleIconView?.clipsToBounds = false
+            circleView.clipsToBounds = false
+            circleBG.clipsToBounds =  false
         } else {
             if let iconTintColor = iconTintColor {
                 circleIconView = UIImageView(image: iconImage!.withRenderingMode(.alwaysTemplate))
@@ -644,8 +614,8 @@ open class Oops: UIViewController {
             if circleIconView is UIImageView {
                (circleIconView as! UIImageView).contentMode = .scaleAspectFill
             }
+            circleIconView?.clipsToBounds = true
         }
-        circleIconView?.clipsToBounds = true
         circleView.addSubview(circleIconView!)
         let x = (configuration.circleHeight - configuration.circleIconHeight) / 2
         if circleIconView is UIImageView {
@@ -671,7 +641,15 @@ open class Oops: UIViewController {
                 btn.backgroundColor = customBackgroundColor
             } else {
                 // Use default BackgroundColor derived from AlertStyle
-                btn.backgroundColor = viewColor
+                if let bc = mainColor {
+                    btn.backgroundColor = bc
+                } else {
+                    if btn.isOptionalButton {
+                        btn.backgroundColor = configuration.optionalButtonColor ?? viewColor
+                    } else {
+                        btn.backgroundColor = configuration.normalButtonColor ?? viewColor
+                    }
+                }
             }
             
             if let customTextColor = btn.customTextColor {
@@ -679,7 +657,15 @@ open class Oops: UIViewController {
                 btn.setTitleColor(customTextColor, for: UIControlState())
             } else {
                 // Use default BackgroundColor derived from AlertStyle
-                btn.setTitleColor(buttonTitleColor ?? UIColor.white, for: .normal)
+                if let btc = buttonTitleColor {
+                    btn.setTitleColor(btc, for: .normal)
+                } else {
+                    if btn.isOptionalButton {
+                        btn.setTitleColor(configuration.optionalButtonTitleColor ?? UIColor.white, for: .normal)
+                    } else {
+                        btn.setTitleColor(configuration.normalButtonTitleColor ?? UIColor.white, for: .normal)
+                    }
+                }
             }
         }
         

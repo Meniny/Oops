@@ -1,5 +1,5 @@
 PODS:
-  - Oops (1.0.0)
+  - Oops (2.0.3)
 
 DEPENDENCIES:
   - Oops (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Oops: de1a44d4b3c8b6b9d1d749608b5b5e0f4db15706
+  Oops: 1790beff8af9b0b1ac0054a94ea08290c8f36137
 
 PODFILE CHECKSUM: e6d0028c6b7fd68ecc3091d6948e0c2b57acfb29
 

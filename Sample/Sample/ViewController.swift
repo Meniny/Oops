@@ -150,6 +150,8 @@ class ViewController: UIViewController {
     }
     
     func firstButtonAction() {
-        print("First button tapped")
+        Oops.showLoading("Loading... , please wait", title: "Loading", icon: nil, cancel: true, configuration: nil) {
+            print("Canceled")
+        }
     }
 }

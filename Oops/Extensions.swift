@@ -36,7 +36,7 @@ public extension Oops {
             case .editor:
                 return 0xA429FF
             case .loading:
-                return 0xD62DA5
+                return 0x3C3C46//0xD62DA5
             case .question:
                 return 0x727375
             }   
@@ -44,6 +44,43 @@ public extension Oops {
         
         public var defaultUIColor: UIColor {
             return UIColorFromRGB(defaultUIntColor)
+        }
+        
+        public var defaultButtonTextColor: UIColor {
+            switch self {
+            case .warning:
+                return UIColor.black
+            default:
+                return UIColor.white
+            }
+        }
+        
+        public var icon: UIImage? {
+            switch self {
+            case .success:
+                return Oops.IconPainting.imageOfCheckmark
+                
+            case .error:
+                return Oops.IconPainting.imageOfCross
+                
+            case .notice:
+                return Oops.IconPainting.imageOfNotice
+                
+            case .warning:
+                return Oops.IconPainting.imageOfWarning
+                
+            case .info:
+                return Oops.IconPainting.imageOfInfo
+                
+            case .editor:
+                return Oops.IconPainting.imageOfEditor
+                
+            case .loading:
+                return nil
+                
+            case .question:
+                return Oops.IconPainting.imageOfQuestion
+            }
         }
     }
     
@@ -103,6 +140,12 @@ public extension Oops {
         public var disableTapGesture: Bool// = false
         public var buttonsLayout: Oops.ButtonLayout// = .vertical
         
+        public var optionalButtonColor: UIColor?
+        public var optionalButtonTitleColor: UIColor?
+        
+        public var normalButtonColor: UIColor?
+        public var normalButtonTitleColor: UIColor?
+        
         public init(defaultShadowOpacity: CGFloat = 0.7,
                     circleTopPosition: CGFloat = 0,
                     circleBackgroundTopPosition: CGFloat = 6,
@@ -131,6 +174,10 @@ public extension Oops {
                     contentViewColor: UIColor = UIColorFromRGB(kUIntWhite),
                     contentViewBorderColor: UIColor = UIColorFromRGB(0xCCCCCC),
                     titleColor: UIColor = UIColorFromRGB(0x4D4D4D),
+                    optionalButtonColor: UIColor? = nil,//UIColor(red:0.45, green:0.45, blue:0.46, alpha:1.00),
+                    optionalButtonTitleColor: UIColor? = nil,//UIColor.white,
+                    normalButtonColor: UIColor? = nil,//UIColor(red:0.24, green:0.24, blue:0.27, alpha:1.00),
+                    normalButtonTitleColor: UIColor? = nil,//UIColor.white,
                     dynamicAnimatorActive: Bool = false,
                     disableTapGesture: Bool = false,
                     buttonsLayout: Oops.ButtonLayout = .vertical) {
@@ -168,6 +215,11 @@ public extension Oops {
             self.hideWhenBackgroundViewIsTapped = hideWhenBackgroundViewIsTapped
             self.dynamicAnimatorActive = dynamicAnimatorActive
             self.buttonsLayout = buttonsLayout
+            
+            self.normalButtonColor = normalButtonColor
+            self.normalButtonTitleColor = normalButtonTitleColor
+            self.optionalButtonColor = optionalButtonColor
+            self.optionalButtonTitleColor = optionalButtonTitleColor
         }
         
         public func set(windowHeight height: CGFloat) {

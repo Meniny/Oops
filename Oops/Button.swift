@@ -22,6 +22,7 @@ extension Oops {
             }
         }
         
+        var isOptionalButton: Bool = false
         var actionType = Oops.ActionType.none
         var target: AnyObject!
         var selector: Selector!
