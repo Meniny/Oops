@@ -22,15 +22,15 @@ extension Oops {
             }
         }
         
-        var isOptionalButton: Bool = false
-        var actionType = Oops.ActionType.none
-        var target: AnyObject!
-        var selector: Selector!
-        var action: (() -> Swift.Void)!
-        var customBackgroundColor: UIColor?
-        var customTextColor: UIColor?
-        var initialTitle: String!
-        var showTimeout: Oops.Button.ShowTimeoutConfiguration?
+        open var isOptionalButton: Bool = false
+        open var actionType = Oops.ActionType.none
+        open var target: AnyObject!
+        open var selector: Selector!
+        open var action: (() -> Swift.Void)!
+        open var customBackgroundColor: UIColor?
+        open var customTextColor: UIColor?
+        open var initialTitle: String!
+        open var showTimeout: Oops.Button.ShowTimeoutConfiguration?
         
         
         public init() {

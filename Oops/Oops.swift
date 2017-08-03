@@ -341,9 +341,10 @@ open class Oops: UIViewController {
     open func addButton(_ title: String,
                         backgroundColor: UIColor? = nil,
                         textColor: UIColor? = nil,
+                        font: UIFont? = nil,
                         showTimeout: Oops.Button.ShowTimeoutConfiguration? = nil,
                         action: @escaping () -> Void) -> Oops.Button {
-        let btn = addButton(title, backgroundColor: backgroundColor, textColor: textColor, showTimeout: showTimeout)
+        let btn = addButton(title, backgroundColor: backgroundColor, textColor: textColor, font: font, showTimeout: showTimeout)
         btn.actionType = Oops.ActionType.closure
         btn.action = action
         btn.addTarget(self, action: #selector(Oops.buttonTapped(_:)), for:.touchUpInside)
@@ -366,10 +367,11 @@ open class Oops: UIViewController {
     open func addButton(_ title: String,
                         backgroundColor: UIColor? = nil,
                         textColor: UIColor? = nil,
+                        font: UIFont? = nil,
                         showTimeout: Oops.Button.ShowTimeoutConfiguration? = nil,
                         target: AnyObject,
                         selector: Selector) -> Oops.Button {
-        let btn = addButton(title, backgroundColor: backgroundColor, textColor: textColor, showTimeout: showTimeout)
+        let btn = addButton(title, backgroundColor: backgroundColor, textColor: textColor, font: font, showTimeout: showTimeout)
         btn.actionType = Oops.ActionType.selector
         btn.target = target
         btn.selector = selector
@@ -385,6 +387,7 @@ open class Oops: UIViewController {
     fileprivate func addButton(_ title: String,
                                backgroundColor: UIColor? = nil,
                                textColor: UIColor? = nil,
+                               font: UIFont? = nil,
                                showTimeout: Oops.Button.ShowTimeoutConfiguration? = nil) -> Oops.Button {
         // Update view height
         configuration.set(windowHeight: configuration.windowHeight + configuration.buttonHeight)
@@ -392,7 +395,7 @@ open class Oops: UIViewController {
         let btn = Oops.Button()
         btn.layer.masksToBounds = true
         btn.setTitle(title, for: UIControlState())
-        btn.titleLabel?.font = configuration.buttonFont
+        btn.titleLabel?.font = font ?? configuration.buttonFont
         btn.customBackgroundColor = backgroundColor
         btn.customTextColor = textColor
         btn.initialTitle = title

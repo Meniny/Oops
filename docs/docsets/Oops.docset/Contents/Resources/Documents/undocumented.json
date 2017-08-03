@@ -667,119 +667,84 @@
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 61,
+      "line": 63,
       "symbol": "Oops.init(configuration:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 67,
+      "line": 69,
       "symbol": "Oops.init(coder:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 74,
+      "line": 76,
       "symbol": "Oops.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 80,
+      "line": 82,
       "symbol": "Oops.init(nibName:bundle:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 141,
+      "line": 145,
       "symbol": "Oops.viewWillLayoutSubviews()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 253,
+      "line": 257,
       "symbol": "Oops.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 259,
+      "line": 263,
       "symbol": "Oops.viewDidDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 265,
+      "line": 269,
       "symbol": "Oops.touchesEnded(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 304,
-      "symbol": "Oops.addTextView(text:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 322,
-      "symbol": "Oops.addButton(_:backgroundColor:textColor:showTimeout:action:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 337,
-      "symbol": "Oops.addButton(_:backgroundColor:textColor:showTimeout:target:selector:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 460,
-      "symbol": "Oops.show(_:title:detail:icon:color:buttonTitleColor:completeText:configuration:timeout:animation:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.class",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 483,
-      "symbol": "Oops.show(_:title:detail:icon:color:buttonTitleColor:completeText:timeout:animation:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 710,
+      "line": 770,
       "symbol": "Oops.updateShowTimeout()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 732,
+      "line": 792,
       "symbol": "Oops.hideView()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 760,
+      "line": 820,
       "symbol": "Oops.hideViewTimeout()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/Meniny/Projects/Github/Oops/Oops/Oops.swift",
-      "line": 774,
+      "line": 834,
       "symbol": "Oops.isShowing()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
