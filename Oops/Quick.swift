@@ -251,8 +251,8 @@ public extension Oops {
             }
         }
         
-        if let close = close {
-            notice.addButton(OopsLocalized(close),
+        if close != nil || buttons.isEmpty {
+            notice.addButton(OopsLocalized(close ?? "Done"),
                              backgroundColor: useCustomTheme ? config.optionalButtonColor : style.defaultUIColor,
                              textColor: useCustomTheme ? config.optionalButtonTitleColor : style.defaultButtonTextColor,
                              showTimeout: nil) {

@@ -554,7 +554,10 @@ open class Oops: UIViewController {
         view.alpha = 0
         view.tag = kUniqueTag
         view.accessibilityIdentifier = kUniqueAccessibilityIdentifier
-        let rv = UIApplication.shared.keyWindow! as UIWindow
+        guard let rv = UIApplication.shared.keyWindow else {
+            fatalError("unexpectedly found nil while unwrapping UIApplication.shared.keyWindow")
+//            return self
+        }
         rv.addSubview(view)
         view.frame = rv.bounds
         baseView.frame = rv.bounds

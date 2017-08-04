@@ -20,6 +20,20 @@ let kDefaultAnimationDuration = 2.0
 
 class ViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    var already = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if !already {
+            Oops.showSuccess(kSuccessTitle)
+            already = true            
+        }
+    }
+    
     @IBAction func showSuccess(_ sender: AnyObject) {
         let alert = Oops()
         alert.addButton("First Button", target: self, selector: #selector(ViewController.firstButtonAction))
