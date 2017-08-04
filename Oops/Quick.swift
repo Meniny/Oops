@@ -204,9 +204,9 @@ public extension Oops {
                                    title: String,
                                    icon: UIImage? = nil,
                                    leftButton: String?,
-                                   leftAction: (() -> Swift.Void)?,
+                                   leftAction: ((_ oops: Oops) -> Swift.Void)?,
                                    rightButton: String? = nil,
-                                   rightAction: (() -> Swift.Void)? = nil) -> Oops {
+                                   rightAction: ((_ oops: Oops) -> Swift.Void)? = nil) -> Oops {
         let config = Oops.Configuration()
         config.buttonsLayout = .horizontal
         
@@ -220,9 +220,17 @@ public extension Oops {
                         configuration: config,
                         useCustomTheme: false) { (idx, oops) in
                             if idx == 0 {
-                                leftAction?()
+                                if let l = leftAction {
+                                    l(oops)
+                                } else {
+                                    oops.hideView()
+                                }
                             } else {
-                                rightAction?()
+                                if let r = rightAction {
+                                    r(oops)
+                                } else {
+                                    oops.hideView()
+                                }
                             }
         }
     }
@@ -247,7 +255,11 @@ public extension Oops {
                              backgroundColor: useCustomTheme ? config.normalButtonColor : style.defaultUIColor,
                              textColor: useCustomTheme ? config.normalButtonTitleColor : style.defaultButtonTextColor,
                              showTimeout: nil) {
-                action?(buttons.index(of: t) ?? 0, notice)
+                                if let act = action {
+                                    act(buttons.index(of: t) ?? 0, notice)
+                                } else {
+                                    notice.hideView()
+                                }
             }
         }
         
@@ -256,8 +268,11 @@ public extension Oops {
                              backgroundColor: useCustomTheme ? config.optionalButtonColor : style.defaultUIColor,
                              textColor: useCustomTheme ? config.optionalButtonTitleColor : style.defaultButtonTextColor,
                              showTimeout: nil) {
-                action?(buttons.count + 1, notice)
-                notice.hideView()
+                                if let act = action {
+                                    act(buttons.count + 1, notice)
+                                } else {
+                                    notice.hideView()
+                                }
             }
         }
         

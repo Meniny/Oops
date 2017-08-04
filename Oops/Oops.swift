@@ -43,19 +43,38 @@ open class Oops: UIViewController {
     
     // Members declaration
     var baseView = UIView()
-    var labelTitle = UILabel()
-    var viewText = UITextView()
+    private(set) var labelTitle = UILabel()
+    private(set) var viewText = UITextView()
+    
+    open var titleText: String? {
+        get {
+            return labelTitle.text
+        }
+        set {
+            labelTitle.text = newValue
+        }
+    }
+    
+    open var detailText: String {
+        get {
+            return viewText.text
+        }
+        set {
+            viewText.text = newValue
+        }
+    }
+    
     var contentView = UIView()
     var circleBG = UIView(frame: CGRect(x: 0, y: 0, width: kCircleHeightBackground, height: kCircleHeightBackground))
     var circleView = UIView()
     var circleIconView : UIView?
-    var timeout: Oops.TimeoutConfiguration?
+    private(set)var timeout: Oops.TimeoutConfiguration?
     var showTimeoutTimer: Timer?
     var timeoutTimer: Timer?
     var dismissAction : Oops.DismissClosure?
     fileprivate var textFields: [UITextField] = []
     fileprivate var textViews: [UITextView] = []
-    internal var buttons: [Oops.Button] = []
+    private(set) var buttons: [Oops.Button] = []
     fileprivate var selfReference: Oops?
     
     // MARK: - Initializer
