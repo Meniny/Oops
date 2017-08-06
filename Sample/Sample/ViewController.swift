@@ -158,7 +158,6 @@ class ViewController: UIViewController {
 //        alert.addButton("Third Button") {
 //            print("Third button tapped")
 //        }
-        
         let color = UIColor(red:0.87, green:0.29, blue:0.22, alpha:1.00)
         alert.show(.notice, title: "Custom Color", detail: "Custom color", icon: #imageLiteral(resourceName: "avatar"), color: color)
     }
